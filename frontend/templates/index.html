@@ -1,0 +1,175 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sathishkumar | Python Backend Developer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+<header>
+  <nav class="navbar">
+    <div class="hamburger" onclick="toggleMenu(event)">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about" class="nav-item">About</a></li>
+      <li><a href="#skills" class="nav-item">Skills</a></li>
+      <li><a href="#projects" class="nav-item">Projects</a></li>
+      <li><a href="#education" class="nav-item">Education</a></li>
+      <li><a href="#contact" class="nav-item">Contact</a></li>
+      <div class="nav-social">
+        <a href="https://github.com/Sathishkumar2k05" target="_blank">
+            <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/sathishkumar-s-49b383359" target="_blank">
+            <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="https://www.hackerrank.com/profile/ssk2k05" target="_blank">
+            <i class="fa-brands fa-hackerrank"></i>
+        </a>
+    </div>
+    </ul>
+  </nav>
+</header>
+
+    <div class="hero">
+        <img src="{% static 'assets/images/profile.jpg.jpeg' %}" alt="Sathishkumar">
+        <h1>Sathishkumar</h1>
+        <p>Python Backend / Full Stack Developer (Fresher)</p>
+    </div>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p>
+        I am a Computer Science graduate and a trained Python Full Stack Developer, having completed my Full Stack Python course at Besant Technologies, Bengaluru. I have a strong foundation in Python, Django, Django REST Framwork, MySQL, HTML, CSS, and JavaScript, with hands-on practice through projects and assignments. As a fresher, I am passionate about backend development, database design, and building efficient web applications. I am actively seeking an entry-level Python developer role where I can apply my skills, learn from real-world projects, and grow as a software professional.
+    </p>
+</section>
+
+<section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+        <span>Python</span>
+        <span>Django</span>
+        <span>Django REST Framework</span>
+        <span>SQL / MySQL</span>
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>Git & GitHub</span>
+    </div>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="projects_container">
+        <div class="project-card">
+            <h3 class="pro_title">School Management System - Django REST Framework API (Backend Project)</h3>
+            <a href="https://github.com/Sathishkumar2k05/Django-Rest-API-System.git" class="pro_git">GitHub</a>
+            <br>
+            <hr>
+            <br>
+            <p><ul>
+                <li>Developed and deployed high-performance REST APIs using Django REST Framework, improving scalability and reliability.</li>
+                <li>Integrated JWT-based authentication and role-based access control, increasing system security and reliability.</li>
+                <li>Utilized Postman for API testing and optimized models using Django ORM.</li>
+                <li>Improved API speed using select related and prefetch related, reducing query count by 30%.</li>
+            </ul></p>
+        </div>
+
+        <div class="project-card">
+            <h3 class="pro_title">Billing Management System - Django (Full-Stack Project)</h3>
+            <a href="https://github.com/Sathishkumar2k05/Billing-System" class="pro_git">GitHub</a>
+            <br>
+            <hr>
+            <br>
+            <p><ul>
+                <li>Built a full-stack billing and inventory system using Django, Python and MySQL.</li>
+                <li>Implemented secure authentication, authorization, and CRUD features, improving user management efficiency by 30%.</li>
+                <li>Optimized database queries, reducing response time by 25% and improving reporting performance.</li>
+                <li>Configured Django templates, URL routing and form handling for seamless navigation and user experience, Implemented front-end design enhancements to improve user experience.</li>
+            </ul></p>
+        </div>
+        <div class="project-card">
+            <h3 class="pro_title">To-Do Application - Django (Full-Stack Project)</h3>
+            <a href="https://github.com/Sathishkumar2k05/todo-list-app-django-python-sql-html-css-js.git" class="pro_git">GitHub</a>
+            <br>
+            <hr>
+            <br>
+            <p><ul>
+                <li>Developed a full-stack task management application using Django with a clean and modular architecture.</li>
+                <li>Implemented CRUD operations with Class-Based Views (CBVs) for reusable and scalable code.</li>
+                <li>Designed a responsive UI and added dark-mode using JavaScript and CSS for enhanced user experience.</li>
+                <li>Integrated MySQL for structured data storage and smooth data retrieval, showcasing effective object relational mapping and database interaction.</li>
+            </ul></p>
+        </div>
+    </div>
+</section>
+
+<section id="education">
+    <h2>Education</h2>
+    <p><strong>Krishna Arts and Science College, Krishnagiri, Tamil Nadu</strong></p>
+    <p>Bachelor of Science in Computer Science(2022 - 2025)</p>
+    <br>
+    <p><strong>Besant Technologies, Bengaluru, Karnataka</strong></p>
+    <p>Python Full Stack(6 months)</p>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <p>Phone: <strong>9384904315</strong></p>
+    <p>Email: <strong>ssk2k05@email.com</strong></p>
+    <p>Location: Bengaluru / Karnataka</p>
+    <p>Native Location: Dharmapuri(District) / Tamil Nadu</p>
+    <a href="Sathishkumar_Resume.pdf" download id="resume" class="pro_resume">Download Resume</a>
+</section>
+<section id="message">
+    <div class="form-box" style="height: 100vh; overflow: hidden;">
+        {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-success">
+            {{message}}
+        </div>
+        {% endfor %}
+        {% endif %}
+        <form method="post">
+            {% csrf_token %}
+            <div>
+                <p>Yourname</p>
+                {{form.name}}
+            </div>
+            <div>
+                <p>Email</p>
+                {{form.email}}
+            </div>
+            <div>
+                <p>Message</p>
+                {{form.message}}
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+    </div>
+</section>
+<section id="social_link">
+    <div class="social">
+        <a href="https://github.com/Sathishkumar2k05" target="_blank">
+            <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/sathishkumar-s-49b383359" target="_blank">
+            <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="https://www.hackerrank.com/profile/ssk2k05" target="_blank">
+            <i class="fa-brands fa-hackerrank"></i>
+        </a>
+    </div>
+</section>
+<footer>
+    <p>© 2025 Sathishkumar. All Rights Reserved.</p>
+</footer>
+</body>
+<script src="{% static 'js/script.js' %}"></script>
+</html>
